@@ -1,0 +1,41 @@
+#Phil's Shipping Program
+
+package_weight = 41.5
+cost_ground = 0
+cost_premimum = 125.00
+cost_drone = 0
+
+#Ground Shipping
+if package_weight <= 2:
+  cost_ground = (package_weight * 1.50 + 20.00)
+elif package_weight <= 6:
+  cost_ground = (package_weight * 3.00 + 20)
+elif package_weight <= 10:
+  cost_ground = (package_weight * 4.00 + 20)
+elif package_weight > 10:
+  cost_ground = (package_weight * 4.75 + 20)
+else:
+  print ("Error! Please use a valid weight ")
+
+print("Ground Shipping Cost $",cost_ground)
+
+#Ground Shipping Premium
+print("Ground Shipping Premium $",cost_premimum)
+
+
+#Drone Shipping
+if package_weight <= 2:
+  cost_drone = (package_weight * 4.50)
+elif package_weight <= 6:
+  cost_drone = (package_weight * 9.00)
+elif package_weight <=10:
+  cost_drone = (package_weight * 12.00)
+elif package_weight > 10:
+  cost_drone = (package_weight * 14.25)
+else:
+  print("Not a real weight you silly goose!")
+
+print("Drone Shipping Cost $",cost_drone)
+
+
+
